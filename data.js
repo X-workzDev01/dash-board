@@ -18,15 +18,15 @@ let batchList = [
     {
         "batch": "June-19 Rajajinagar",
         "trainer": "Omkar",
-        "topic": "Spring MVC",
+        "topic": "JPA",
         "timing":"4:00 PM",
         "trainees":"30"
     },
     {
         "batch": "July-24 Rajajinagar",
-        "trainer": "Lokesh",
-        "topic": "JDBC",
-        "timing":"1:45 PM",
+        "trainer": "Omkar",
+        "topic": "JPA",
+        "timing":"4:00 PM",
         "trainees":"23"
     },
     {
