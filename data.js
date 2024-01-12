@@ -46,13 +46,13 @@ let batchList = [
     {
         "batch": "Sep-27 BTM",
         "trainer": "Omkar",
-        "topic": "Exception",
+        "topic": "Collection",
         "timing":"12:00 PM",
         "trainees":"19"
     }, {
         "batch": "Nov-27 BTM",
         "trainer": "Abhishek",
-        "topic": "Static methods",
+        "topic": "OOP's Concepts",
         "timing":"11:00 AM",
         "trainees":"13"
     },
