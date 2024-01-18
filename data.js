@@ -60,7 +60,7 @@ let batchList = [
     {
         "batch": "Online",
         "trainer": "Satish",
-        "topic": "SQL",
+        "topic": "JDBC",
         "timing":"8:30 AM",
         "trainees":"7"
     }
