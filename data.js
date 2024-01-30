@@ -1,7 +1,14 @@
 
 let batchList = [
     // <!-- //om,abhish,suhas.satish,dev,lokesh ,exception vinoda,javascript -hareesha -->
+    
     {
+        "batch": "Jan-29 Rajajinagar",
+        "trainer": "Vinoda",
+        "topic": "Induction",
+        "timing":"9:00 AM",
+        "trainees":"12"
+    },{
         "batch": "June-5 Rajajinagar",
         "trainer": "Vinoda",
         "topic": "Project",
@@ -45,9 +52,9 @@ let batchList = [
     },
     {
         "batch": "Sep-27 BTM",
-        "trainer": "Omkar",
-        "topic": "Collection",
-        "timing":"12:00 PM",
+        "trainer": "Lokesh",
+        "topic": "JDBC",
+        "timing":"9:30 PM",
         "trainees":"19"
     }, {
         "batch": "Nov-27 BTM",
