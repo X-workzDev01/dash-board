@@ -4,10 +4,10 @@ let batchList = [
     
     {
         "batch": "Jan-29 Rajajinagar",
-        "trainer": "Vinoda",
+        "trainer": "Devendra",
         "topic": "Induction",
         "timing":"9:00 AM",
-        "trainees":"12"
+        "trainees":"8"
     },{
         "batch": "June-5 Rajajinagar",
         "trainer": "Vinoda",
