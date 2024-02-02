@@ -36,6 +36,13 @@ let batchList = [
         "timing":"4:00 PM",
         "trainees":"23"
     },
+	 {
+        "batch": "July-24 Rajajinagar",
+        "trainer": "Devendra",
+        "topic": "Servlet",
+        "timing":"11:30 AM",
+        "trainees":"23"
+    },
     {
         "batch": "Aug-21 Rajajinagar",
         "trainer": "Vinoda",
@@ -54,7 +61,7 @@ let batchList = [
         "batch": "Sep-27 BTM",
         "trainer": "Lokesh",
         "topic": "JDBC",
-        "timing":"9:30 PM",
+        "timing":"9:30 AM",
         "trainees":"19"
     }, {
         "batch": "Nov-27 BTM",
