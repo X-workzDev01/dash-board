@@ -1,7 +1,13 @@
 
 let batchList = [
     // <!-- //om,abhish,suhas.satish,dev,lokesh ,exception vinoda,javascript -hareesha -->
-    
+    {
+        "batch": "Online Feb-5",
+        "trainer": "Satish",
+        "topic": "Induction",
+        "timing":"7:00 PM",
+        "trainees":"7"
+    },
     {
         "batch": "Jan-29 Rajajinagar",
         "trainer": "Devendra",
@@ -25,17 +31,11 @@ let batchList = [
     {
         "batch": "June-19 Rajajinagar",
         "trainer": "Omkar",
-        "topic": "JPA",
-        "timing":"4:00 PM",
+        "topic": "Project",
+        "timing":"5:00 PM",
         "trainees":"30"
     },
-    {
-        "batch": "July-24 Rajajinagar",
-        "trainer": "Omkar",
-        "topic": "JPA",
-        "timing":"4:00 PM",
-        "trainees":"23"
-    },
+    
 	 {
         "batch": "July-24 Rajajinagar",
         "trainer": "Devendra",
@@ -65,18 +65,10 @@ let batchList = [
         "trainees":"19"
     }, {
         "batch": "Nov-27 BTM",
-        "trainer": "Abhishek",
+        "trainer": "Omkar",
         "topic": "OOP's Concepts",
         "timing":"11:00 AM",
         "trainees":"13"
-    },
-    
-    {
-        "batch": "Online",
-        "trainer": "Satish",
-        "topic": "JDBC",
-        "timing":"8:30 AM",
-        "trainees":"7"
     }
     
     
