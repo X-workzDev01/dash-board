@@ -38,22 +38,15 @@ let batchList = [
 	 {
         "batch": "July-24 Rajajinagar",
         "trainer": "Devendra",
-        "topic": "Spring",
+        "topic": "Project",
         "timing":"11:30 AM",
         "trainees":"23"
     },
     {
         "batch": "Aug-21 Rajajinagar",
         "trainer": "Vinoda",
-        "topic": "Servlet",
+        "topic": "Spring MVC",
         "timing":"4:00 PM",
-        "trainees":"11"
-    },
-    {
-        "batch": "Aug-21 Rajajinagar",
-        "trainer": "Chetan",
-        "topic": "JDBC",
-        "timing":"6:00 PM",
         "trainees":"11"
     },
     {
@@ -65,7 +58,7 @@ let batchList = [
     }, {
         "batch": "Nov-27 BTM",
         "trainer": "Omkar",
-        "topic": "Exception",
+        "topic": "Servlet",
         "timing":"11:00 AM",
         "trainees":"13"
     }
@@ -93,23 +86,14 @@ let batchList = [
 
 
 
-// let upcomingBatch = [
+ let upcomingBatch = [
 
-//     {
-//         "batch": "jan 5",
-//         "trainer": "dev sir",
-//         "location": "Rajajinagar"
-//     }, {
-//         "batch": "feb 10",
-//         "trainer": "om sir",
-//         "location": "Rajajinagar"
-//     },
-//     {
-//         "batch": "feb 12",
-//         "trainer": "hareesha",
-//         "location": "BTM"
-//     }
-// ]
+    {
+         "batch": "March 26",
+         "location": "Rajajinagar",
+		 "timing":"6:00 pm"
+     }, 
+ ]
 
 
 

@@ -10,7 +10,7 @@
     <link rel="icon" type="image/x-icon" href="https://www.x-workz.in/static/media/Logo.cf195593dc1b3f921369.png?">
 
     <script type="text/javascript" src="data.js"></script>
-    
+
 
 </head>
 
@@ -24,16 +24,16 @@
     table {
         margin-top: -1rem;
     }
-
-    
 </style>
 
 <body>
 
-    
+
     <div class="Topicss w3-responsive w3-animate-left">
 
-        <span><h1 class="w3-center w3-black "><b> ONGOING BATCH DETAILS</b></h1></span>
+        <span>
+            <h1 class="w3-center w3-black "><b> ONGOING BATCH DETAILS</b></h1>
+        </span>
 
         <table class="w3-table-all w3-large w3-black" id="table1">
             <tr class="w3-orange">
@@ -45,7 +45,7 @@
             </tr>
         </table>
     </div>
-  
+
     <!-- <div class="Topicss w3-responsive w3-animate-left">
         <h2 class="w3-center w3-blue"><b>WEEKLY MOCK TEST</b></h2>
 
@@ -56,20 +56,20 @@
                 <th>Topic</th>
             </tr>
         </table>
-    </div>
-
-    <div class="Topicss w3-responsive w3-animate-left ">
-        <h2 class="w3-center w3-blue"><b>UPCOMING BATCHES</b> </h2>
-
-        <table class="w3-table-all" id="table3">
-            <tr class="w3-orange">
-                <th>BATCH</th>
-                <th>Trainer</th>
-                <th>location</th>
-            </tr>
-        </table>
     </div> -->
 
+    <div class="Topicss w3-responsive w3-animate-left ">
+        <span>
+            <h1 class="w3-center w3-black "><b> UPCOMING BATCH </b></h1>
+        </span>
+        <table class="w3-table-all w3-large" id="table3">
+            <tr>
+                
+                <td><img src="./images/batch-1.png" alt="" height="550px"></td>
+            </tr>
+
+        </table>
+    </div>
 
     <script>
 
@@ -118,15 +118,10 @@
         //     document.querySelector("#table2").insertAdjacentHTML('beforeend', newRow);
         // });
 
-        // upcomingBatch.forEach(element => {
-        //     const newRow = ` <tr class="w3-black">
-        //         <th>${element.batch}</th>
-        //         <th>${element.trainer}</th>
-        //         <th>${element.location}</th>
-        //     </tr>
-        //             `;
-        //     document.querySelector("#table3").insertAdjacentHTML('beforeend', newRow);
-        // });
+        upcomingBatch.forEach(element => {
+            const newRow = ` `;
+            document.querySelector("#table3").insertAdjacentHTML('beforeend', newRow);
+        });
     </script>
 
 </body>
