@@ -6,14 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>X-workz</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
     <link rel="icon" type="image/x-icon" href="https://www.x-workz.in/static/media/Logo.cf195593dc1b3f921369.png?">
-
     <script type="text/javascript" src="data.js"></script>
-
-
 </head>
-
 
 <style>
     .Topicss {
@@ -21,65 +16,73 @@
         display: none;
     }
 
-    table {
-        margin-top: -1rem;
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+
+    .card {
+        width: 300px;
+        border: none;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        background-color: #f9f9f9; /* Default background color */
+    }
+
+    .card h3 {
+        color: #333;
+        margin-top: 0;
+    }
+
+    .card p {
+        color: #666;
+        margin-bottom: 10px;
+    }
+
+    /* Customize card background colors */
+    .card-odd {
+        background-color: #FFD700; /* Gold */
+    }
+
+    .card-even {
+        background-color: #FF6347; /* Tomato */
     }
 </style>
 
-<body >
+<body>
 
-
-    <div class="Topicss w3-responsive w3-animate-left">
+    <div class="Topicss w3-animate-left">
 
         <span>
             <h1 class="w3-center w3-black "><b> ONGOING BATCH DETAILS</b></h1>
         </span>
 
-        <table class="w3-table-all w3-large w3-black" id="table1">
-            <tr class="w3-orange">
-                <th>Batch</th>
-                <th class="w3-center">Trainer</th>
-                <th class="w3-center">Topic</th>
-                <th class="w3-center">Timing</th>
-                <th class="w3-center">No of Trainees</th>
-            </tr>
-        </table>
+        <div class="card-container" id="ongoingBatch"></div>
     </div>
 
-    <!-- <div class="Topicss w3-responsive w3-animate-left">
+    <!-- <div class="Topicss w3-animate-left">
         <h2 class="w3-center w3-blue"><b>WEEKLY MOCK TEST</b></h2>
 
-        <table class="w3-table-all" id="table2">
-            <tr class="w3-orange">
-                <th>Batch</th>
-                <th>mock_spoc</th>
-                <th>Topic</th>
-            </tr>
-        </table>
-    </div> -->
-
-    <div class="Topicss w3-responsive w3-animate-left bg-dark">
-        <span>
-            <h1 class="w3-left"><b> UPCOMING  </b></h1>
-            <h1 class="w3-left mt-3"><b>  BATCH </b></h1>
-        </span>
-        <table class="w3-table-all w3-large" id="table3">
-            <tr>
-                <td class="w3-large">UPCOMING BATCH</td>
-                <td style="padding-left: 400px;" ><img src="./images/batch-1.png" alt="" height="550px" class="w3-card-4 w3-border w3-round w3-round-xlarge"></td>
-            </tr>
-
-        </table>
+        <div class="card-container" id="weeklyMock"></div>
     </div>
+
+    <div class="Topicss w3-animate-left bg-dark">
+        <span>
+            <h1 class="w3-left"><b> UPCOMING BATCH </b></h1>
+        </span>
+        <div class="card-container" id="upcomingBatch"></div>
+    </div> -->
 
     <script>
 
         var slideIndex = 0;
-
         slides();
 
         function slides() {
-
             var i;
             var x = document.getElementsByClassName("Topicss");
             for (i = 0; i < x.length; i++) {
@@ -92,37 +95,42 @@
 
             x[slideIndex - 1].style.display = "block";
             setTimeout(slides, 2000);
-
-
         }
 
-
-        batchList.forEach(element => {
-            const newRow = ` <tr class="w3-black">
-                <th>${element.batch}</th>
-                <th class="w3-center">${element.trainer}</th>
-                <th class="w3-center">${element.topic}</th>
-                <th class="w3-center">${element.timing}</th>
-                <th class="w3-center">${element.trainees}</th>
-            </tr> `;
-            document.querySelector("#table1").insertAdjacentHTML('beforeend', newRow);
+        // Populate ongoing batch details
+        batchList.forEach((element, index) => {
+            const card = `
+                <div class="card ${index % 2 === 0 ? 'card-even' : 'card-odd'}">
+                    <h3>${element.batch}</h3>
+                    <p><strong>Trainer:</strong> ${element.trainer}</p>
+                    <p><strong>Topic:</strong> ${element.topic}</p>
+                    <p><strong>Timing:</strong> ${element.timing}</p>
+                    <p><strong>No of Trainees:</strong> ${element.trainees}</p>
+                </div>`;
+            document.getElementById("ongoingBatch").insertAdjacentHTML('beforeend', card);
         });
 
-
-        // weeklyMock.forEach(element => {
-        //     const newRow = ` <tr class="w3-black">
-        //         <th>${element.batch}</th>
-        //         <th>${element.mock_spoc}</th>
-        //         <th>${element.topic}</th>
-        //     </tr>
-        //             `;
-        //     document.querySelector("#table2").insertAdjacentHTML('beforeend', newRow);
-        // });
-
-        upcomingBatch.forEach(element => {
-            const newRow = ` `;
-            document.querySelector("#table3").insertAdjacentHTML('beforeend', newRow);
+        // Populate weekly mock test details
+        weeklyMock.forEach((element, index) => {
+            const card = `
+                <div class="card ${index % 2 === 0 ? 'card-even' : 'card-odd'}">
+                    <h3>${element.batch}</h3>
+                    <p><strong>Mock SPOC:</strong> ${element.mock_spoc}</p>
+                    <p><strong>Topic:</strong> ${element.topic}</p>
+                </div>`;
+            document.getElementById("weeklyMock").insertAdjacentHTML('beforeend', card);
         });
+
+        // Populate upcoming batch details (if any)
+        upcomingBatch.forEach((element, index) => {
+            const card = `
+                <div class="card ${index % 2 === 0 ? 'card-even' : 'card-odd'}">
+                    <h3>${element.batch}</h3>
+                    <p><strong>Details:</strong> ${element.details}</p>
+                </div>`;
+            document.getElementById("upcomingBatch").insertAdjacentHTML('beforeend', card);
+        });
+
     </script>
 
 </body>

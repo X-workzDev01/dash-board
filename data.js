@@ -5,7 +5,7 @@ let batchList = [, {
         "topic": "Variables",
         "timing":"6:00 PM",
         "trainees":"5"
-    }
+    },
     {
         "batch": "Online Feb-5",
         "trainer": "Satish",
@@ -19,19 +19,6 @@ let batchList = [, {
         "topic": "Methods",
         "timing":"9:00 AM",
         "trainees":"8"
-    },{
-        "batch": "June-5 Rajajinagar",
-        "trainer": "Vinoda",
-        "topic": "Project",
-        "timing":"10:00 AM",
-        "trainees":"27"
-    },
-    {
-        "batch": "June-7 BTM",
-        "trainer": "Suhas",
-        "topic": "Project",
-        "timing":"10:00 AM",
-        "trainees":"14"
     },
     {
         "batch": "June-19 Rajajinagar",
@@ -51,25 +38,24 @@ let batchList = [, {
     {
         "batch": "Aug-21 Rajajinagar",
         "trainer": "Vinoda",
-        "topic": "Spring MVC",
+        "topic": "Project",
         "timing":"4:00 PM",
         "trainees":"11"
     },
     {
         "batch": "Sep-27 BTM",
-        "trainer": "Omkar",
-        "topic": "Servlet",
+        "trainer": "Lokesh",
+        "topic": "JPA",
         "timing":"9:30 AM",
         "trainees":"19"
     }, {
         "batch": "Nov-27 BTM",
         "trainer": "Omkar",
-        "topic": "Servlet",
+        "topic": "JAVA 8 Features",
         "timing":"11:00 AM",
         "trainees":"13"
     }
-    
-    
+     
 ]
 
 // let weeklyMock = [
@@ -92,14 +78,14 @@ let batchList = [, {
 
 
 
- let upcomingBatch = [
+//  let upcomingBatch = [
 
-    {
-         "batch": "March 26",
-         "location": "Rajajinagar",
-		 "timing":"6:00 pm"
-     }, 
- ]
+//     {
+//          "batch": "March 26",
+//          "location": "Rajajinagar",
+// 		 "timing":"6:00 pm"
+//      }, 
+//  ]
 
 
 
