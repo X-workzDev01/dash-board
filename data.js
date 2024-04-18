@@ -1,5 +1,11 @@
 
-let batchList = [
+let batchList = [, {
+        "batch": "March-26 Rajajinagar",
+        "trainer": "Chetan",
+        "topic": "Variables",
+        "timing":"6:00 PM",
+        "trainees":"5"
+    }
     {
         "batch": "Online Feb-5",
         "trainer": "Satish",
