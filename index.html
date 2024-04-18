@@ -9,7 +9,6 @@
     <link rel="icon" type="image/x-icon" href="https://www.x-workz.in/static/media/Logo.cf195593dc1b3f921369.png?">
     <script type="text/javascript" src="data.js"></script>
 </head>
-
 <style>
     .Topicss {
         margin-top: -1rem;
@@ -30,26 +29,28 @@
         padding: 20px;
         margin: 10px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        background-color: #f9f9f9; /* Default background color */
+        background-color: #f0f0f0; 
     }
 
     .card h3 {
         color: #333;
         margin-top: 0;
+        font-size: 1.5em; 
+        font-weight: bold; 
     }
 
     .card p {
-        color: #666;
+        color: #555; 
         margin-bottom: 10px;
+        font-size: 1.1em;
     }
 
-    /* Customize card background colors */
     .card-odd {
-        background-color: #FFD700; /* Gold */
+        background-color: #D8BFD8; 
     }
 
     .card-even {
-        background-color: #FF6347; /* Tomato */
+        background-color: #E6E6FA; 
     }
 </style>
 
@@ -97,7 +98,6 @@
             setTimeout(slides, 2000);
         }
 
-        // Populate ongoing batch details
         batchList.forEach((element, index) => {
             const card = `
                 <div class="card ${index % 2 === 0 ? 'card-even' : 'card-odd'}">
@@ -110,26 +110,24 @@
             document.getElementById("ongoingBatch").insertAdjacentHTML('beforeend', card);
         });
 
-        // Populate weekly mock test details
-        weeklyMock.forEach((element, index) => {
-            const card = `
-                <div class="card ${index % 2 === 0 ? 'card-even' : 'card-odd'}">
-                    <h3>${element.batch}</h3>
-                    <p><strong>Mock SPOC:</strong> ${element.mock_spoc}</p>
-                    <p><strong>Topic:</strong> ${element.topic}</p>
-                </div>`;
-            document.getElementById("weeklyMock").insertAdjacentHTML('beforeend', card);
-        });
+        // weeklyMock.forEach((element, index) => {
+        //     const card = `
+        //         <div class="card ${index % 2 === 0 ? 'card-even' : 'card-odd'}">
+        //             <h3>${element.batch}</h3>
+        //             <p><strong>Mock SPOC:</strong> ${element.mock_spoc}</p>
+        //             <p><strong>Topic:</strong> ${element.topic}</p>
+        //         </div>`;
+        //     document.getElementById("weeklyMock").insertAdjacentHTML('beforeend', card);
+        // });
 
-        // Populate upcoming batch details (if any)
-        upcomingBatch.forEach((element, index) => {
-            const card = `
-                <div class="card ${index % 2 === 0 ? 'card-even' : 'card-odd'}">
-                    <h3>${element.batch}</h3>
-                    <p><strong>Details:</strong> ${element.details}</p>
-                </div>`;
-            document.getElementById("upcomingBatch").insertAdjacentHTML('beforeend', card);
-        });
+        // upcomingBatch.forEach((element, index) => {
+        //     const card = `
+        //         <div class="card ${index % 2 === 0 ? 'card-even' : 'card-odd'}">
+        //             <h3>${element.batch}</h3>
+        //             <p><strong>Details:</strong> ${element.details}</p>
+        //         </div>`;
+        //     document.getElementById("upcomingBatch").insertAdjacentHTML('beforeend', card);
+        // });
 
     </script>
 
