@@ -2,7 +2,7 @@
 let batchList = [, {
         "batch": "March-26 Rajajinagar",
         "trainer": "Chetan",
-        "topic": "Variables",
+        "topic": "OOPS Concept",
         "timing":"6:00 PM",
         "trainees":"5"
     },
@@ -15,40 +15,13 @@ let batchList = [, {
     },
     {
         "batch": "Jan-29 Rajajinagar",
-        "trainer": "Devendra",
+        "trainer": "Vinoda",
         "topic": "Methods",
         "timing":"9:00 AM",
         "trainees":"8"
     },
-    {
-        "batch": "June-19 Rajajinagar",
-        "trainer": "Omkar",
-        "topic": "Project",
-        "timing":"5:00 PM",
-        "trainees":"30"
-    },
     
-	 {
-        "batch": "July-24 Rajajinagar",
-        "trainer": "Devendra",
-        "topic": "Project",
-        "timing":"11:30 AM",
-        "trainees":"23"
-    },
-    {
-        "batch": "Aug-21 Rajajinagar",
-        "trainer": "Vinoda",
-        "topic": "Project",
-        "timing":"4:00 PM",
-        "trainees":"11"
-    },
-    {
-        "batch": "Sep-27 BTM",
-        "trainer": "Lokesh",
-        "topic": "JPA",
-        "timing":"9:30 AM",
-        "trainees":"19"
-    }, {
+     {
         "batch": "Nov-27 BTM",
         "trainer": "Omkar",
         "topic": "JAVA 8 Features",
@@ -57,6 +30,8 @@ let batchList = [, {
     }
      
 ]
+
+getHrDetailsByCollege
 
 // let weeklyMock = [
 
