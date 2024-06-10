@@ -5,7 +5,7 @@ let batchList = [
         "trainer": "Devendra",
         "topic": "Basic Java",
         "timing": "11:30 AM",
-        "trainees": "62"
+        "trainees": "98"
     },
     {
         "batch": "Nitte-meenakshi CSR",
