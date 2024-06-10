@@ -1,5 +1,12 @@
 
 let batchList = [
+ {
+        "batch": "CH10ROM",
+        "trainer": "Devendra",
+        "topic": "Basic Java",
+        "timing": "2:30 AM",
+        "trainees": "45"
+    },
     {
         "batch": "CH03ROM",
         "trainer": "Devendra",
