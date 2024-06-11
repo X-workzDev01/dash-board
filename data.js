@@ -4,7 +4,7 @@ let batchList = [
         "batch": "CH10ROM",
         "trainer": "Devendra",
         "topic": "Basic Java",
-        "timing": "2:30 AM",
+        "timing": "2:30 PM",
         "trainees": "45",
         "location": "Rajajinagar"
     }, {
@@ -33,7 +33,7 @@ let batchList = [
     }, {
         "batch": "March-26 Rajajinagar",
         "trainer": "Chetan",
-        "topic": "Variables",
+        "topic": "Interface",
         "timing": "6:00 PM",
         "trainees": "5",
         "location": "Rajajinagar"
@@ -48,7 +48,7 @@ let batchList = [
     },
     {
         "batch": "Jan-29 Rajajinagar",
-        "trainer": "Devendra",
+        "trainer": "Vinoda",
         "topic": "Collection",
         "timing": "9:00 AM",
         "trainees": "8",
