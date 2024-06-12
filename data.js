@@ -54,15 +54,6 @@ let batchList = [
         "trainees": "8",
         "location": "Rajajinagar"
     },
-
-    {
-        "batch": "July-24 Rajajinagar",
-        "trainer": "Devendra",
-        "topic": "Project Completed",
-        "timing": "11:30 AM",
-        "trainees": "23",
-        "location": "Rajajinagar"
-    },
     {
         "batch": "Sep-27 BTM",
         "trainer": "Omkar",
