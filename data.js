@@ -39,29 +39,14 @@ let batchList = [
         "location": "Rajajinagar"
     },
     {
-        "batch": "Online Feb-5",
-        "trainer": "Satish",
-        "topic": "OOPS",
-        "timing": "7:00 PM",
-        "trainees": "7",
-        "location": "Online"
-    },
-    {
         "batch": "Jan-29 Rajajinagar",
-        "trainer": "Vinoda",
-        "topic": "Collection",
-        "timing": "9:00 AM",
+        "trainer": "Lokesh",
+        "topic": "JDBC",
+        "timing": "12:30 AM",
         "trainees": "8",
         "location": "Rajajinagar"
     },
-    {
-        "batch": "Sep-27 BTM",
-        "trainer": "Omkar",
-        "topic": "Project",
-        "timing": "11:00 AM",
-        "trainees": "13",
-        "location": "BTM"
-    }
+    
 
 ]
 
