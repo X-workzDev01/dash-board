@@ -1,5 +1,13 @@
 
 let batchList = [
+	{
+        "batch": "CH17ROM",
+        "trainer": "Omkar",
+        "topic": "Basic Java",
+        "timing": "8:00 AM",
+        "trainees": "100",
+        "location": "Rajajinagar"
+    },
     {
         "batch": "CH10ROM",
         "trainer": "Devendra",
@@ -12,7 +20,7 @@ let batchList = [
         "trainer": "Vinoda",
         "topic": "Basic Java",
         "timing": "10:00 AM",
-        "trainees": "20",
+        "trainees": "35",
         "location": "BTM"
     },
     {
