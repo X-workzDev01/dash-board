@@ -10,10 +10,26 @@ let batchList = [
     },
 	{
         "batch": "CH17ROM",
+        "trainer": "Sunil",
+        "topic": "SQL",
+        "timing": "8:00 AM",
+        "trainees": "100",
+        "location": "Rajajinagar"
+    },
+	{
+        "batch": "CH17ROM",
         "trainer": "Omkar",
         "topic": "Basic Java",
         "timing": "8:00 AM",
         "trainees": "100",
+        "location": "Rajajinagar"
+    },
+	 {
+        "batch": "CH10ROM",
+        "trainer": "Hareesha",
+        "topic": "WEB technologies",
+        "timing": "8:00 AM",
+        "trainees": "45",
         "location": "Rajajinagar"
     },
     {
@@ -33,9 +49,9 @@ let batchList = [
     },
     {
         "batch": "CH03ROM",
-        "trainer": "Devendra",
-        "topic": "Basic Java",
-        "timing": "11:30 AM",
+        "trainer": "Devendra/Shantanu",
+        "topic": "Basic Java/WEB",
+        "timing": "11:30 AM/2:30 PM",
         "trainees": "98",
         "location": "Rajajinagar"
     },
