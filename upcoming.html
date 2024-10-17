@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>X-workz - Upcoming Batch</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="icon" type="image/x-icon" href="https://www.x-workz.in/static/media/Logo.cf195593dc1b3f921369.png?">
+</head>
+<style>
+    .card-container {
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .card {
+        width: 300px;
+        border: none;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 10px;
+        box-shadow: 0 4px 8px 8px rgba(66, 56, 206, 0.2);
+        background: linear-gradient(to bottom, rgb(95, 190, 221), lightgreen);
+        color: #fff;
+    }
+
+    .card h3,
+    .card p {
+        color: rgb(7, 0, 0);
+        font-weight: bolder;
+    }
+
+    .card p {
+        margin-bottom: 10px;
+        font-size: 1.1em;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    marquee {
+        width: 100%;
+        background-color: lightcoral;
+        padding: 10px 0;
+        color: rgb(7, 80, 153);
+        font-size: 20px;
+        border-radius: 5px;
+    }
+</style>
+
+<body>
+
+    <div>
+        <span>
+            <h1 class="w3-center w3-amber"><b>UPCOMING BATCH DETAILS</b></h1>
+        </span>
+
+        <marquee behavior="scroll" direction="ltr">New batch details</marquee>
+
+        <div class="card-container">
+            <div class="card">
+                <h3>November 07</h3>
+                <p><strong>Location:</strong> Rajajinagar</p>
+                <p><strong>Timing:</strong> 2:00 PM</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        setTimeout(function () {
+            window.location.href = "index.html";
+        }, 30000); // 30 seconds
+    </script>
+   
+</body>
+
+</html>

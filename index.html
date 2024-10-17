@@ -29,13 +29,13 @@
     padding: 20px;
     margin: 10px;
     box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(to bottom, #000000 40%,orangered 60%);
+    background: linear-gradient(to bottom, rgb(76, 152, 177),lightgreen);
     color: #fff; 
 }
 
 .card h3,
 .card p {
-    color: #fff; 
+    color: rgb(12, 0, 0); 
     font-weight: bolder;
 }
 
@@ -52,6 +52,14 @@
     .card-even {
         background-color: #E6E6FA; 
     }
+    marquee {
+        width: 100%;
+        background-color: lightcoral;
+        padding: 10px 0;
+        color: rgb(7, 80, 153);
+        font-size: 20px;
+        border-radius: 5px;
+    }
 </style>
 
 <body>
@@ -59,9 +67,9 @@
     <div class="Topicss w3-animate-left">
 
         <span>
-            <h1 class="w3-center w3-black "><b> ONGOING BATCH DETAILS</b></h1>
+            <h1 class="w3-center w3-amber "><b> ONGOING BATCH DETAILS</b></h1>
         </span>
-
+        <marquee behavior="scroll" direction="ltr">Upcoming batch....!!!!</marquee>
         <div class="card-container" id="ongoingBatch"></div>
     </div>
 
@@ -128,6 +136,12 @@
         //         </div>`;
         //     document.getElementById("upcomingBatch").insertAdjacentHTML('beforeend', card);
         // });
+
+          // Redirect to upcoming batch page after 30 seconds
+          setTimeout(function () {
+            window.location.href = "upcoming.html";
+        }, 30000); // 30 seconds
+
 
     </script>
 

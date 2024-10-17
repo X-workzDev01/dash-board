@@ -1,88 +1,82 @@
 
 let batchList = [
-{
-        "batch": "CH24ROM",
+    {
+        "batch": "CH03ROM/CH10ROM",
+        "trainer": "Devendra",
+        "topic": "Collection",
+        "timing": "12:30 PM",
+        "trainees": "38",
+        "location": "Rajajinagar"
+    },
+    {
+        "batch": "CH10BOM/C015BOA",
+        "trainer": "Vinoda",
+        "topic": "Collection",
+        "timing": "10:00 AM",
+        "trainees": "9",
+        "location": "Rajajinagar"
+    },
+    {
+        "batch": "CH17ROM/CH24ROM",
+        "trainer": "Omkar",
+        "topic": "Collection/Servlet",
+        "timing": "8:00 AM",
+        "trainees": "36",
+        "location": "Rajajinagar"
+    },
+    {
+        "batch": "G005ROE",
+        "trainer": "Chethan",
+        "topic": "Basic Java",
+        "timing": "6:00 PM",
+        "trainees": "03",
+        "location": "Rajajinagar"
+    },
+    {
+        "batch": "G019ROM",
+        "trainer": "Devendra",
+        "topic": "Basic Java",
+        "timing": "10:00 AM",
+        "trainees": "22",
+        "location": "Rajajinagar"
+    }, {
+        "batch": "BR12ROM",
         "trainer": "Omkar",
         "topic": "Basic Java",
         "timing": "11:30 AM",
-        "trainees": "40",
-        "location": "Rajajinagar"
-    },
-	{
-        "batch": "CH17ROM",
-        "trainer": "Sunil",
-        "topic": "SQL",
-        "timing": "8:00 AM",
-        "trainees": "100",
-        "location": "Rajajinagar"
-    },
-	{
-        "batch": "CH17ROM",
-        "trainer": "Omkar",
-        "topic": "Basic Java",
-        "timing": "8:00 AM",
-        "trainees": "100",
-        "location": "Rajajinagar"
-    },
-	 {
-        "batch": "CH10ROM",
-        "trainer": "Hareesha",
-        "topic": "WEB technologies",
-        "timing": "8:00 AM",
-        "trainees": "45",
-        "location": "Rajajinagar"
-    },
-    {
-        "batch": "CH10ROM",
-        "trainer": "Devendra",
-        "topic": "Basic Java",
-        "timing": "2:30 PM",
-        "trainees": "45",
-        "location": "Rajajinagar"
-    }, {
-        "batch": "CH10BOM",
-        "trainer": "Vinoda",
-        "topic": "Basic Java",
-        "timing": "10:00 AM",
-        "trainees": "35",
+        "trainees": "16",
         "location": "BTM"
     },
     {
-        "batch": "CH03ROM",
-        "trainer": "Devendra/Shantanu",
-        "topic": "Basic Java/WEB",
+        "batch": "BR23BOM",
+        "trainer": "Abhishek/Sunil",
+        "topic": "Basic Java",
         "timing": "11:30 AM/2:30 PM",
         "trainees": "98",
         "location": "Rajajinagar"
     },
     {
-        "batch": "Nitte-meenakshi CSR",
-        "trainer": "Hareesha",
-        "topic": "Web technologies",
-        "timing": "10:00 AM",
-        "trainees": "21",
-        "location": "Rajajinagar"
-    }, {
-        "batch": "March-26 Rajajinagar",
-        "trainer": "Chetan",
-        "topic": "Interface",
-        "timing": "6:00 PM",
-        "trainees": "5",
+        "batch": "TA171E",
+        "trainer": "Abhishek",
+        "topic": "Basic Java",
+        "timing": "06:00 PM",
+        "trainees": "10",
         "location": "Rajajinagar"
     },
-    {
-        "batch": "Jan-29 Rajajinagar",
-        "trainer": "Lokesh",
-        "topic": "JDBC",
-        "timing": "12:30 AM",
-        "trainees": "8",
-        "location": "Rajajinagar"
-    },
-    
+    // {
+    //     "batch": "BR23BOM",
+    //     "trainer": "Sunil",
+    //     "topic": "Basic Java",
+    //     "timing": "8:30 AM",
+    //     "trainees": "27",
+    //     "location": "Rajajinagar"
+    // },
+
+
 
 ]
 
-getHrDetailsByCollege
+// getHrDetailsByCollege
 
 // let weeklyMock = [
 
