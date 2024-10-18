@@ -29,7 +29,7 @@ let batchList = [
         "trainer": "Chethan",
         "topic": "Basic Java",
         "timing": "6:00 PM",
-        "trainees": "03",
+        "trainees": "05",
         "location": "Rajajinagar"
     },
     {
@@ -52,7 +52,7 @@ let batchList = [
         "trainer": "Abhishek/Sunil",
         "topic": "Basic Java",
         "timing": "11:30 AM/2:30 PM",
-        "trainees": "98",
+        "trainees": "27",
         "location": "Rajajinagar"
     },
     {
