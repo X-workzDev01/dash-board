@@ -90,7 +90,8 @@
         }, 1000);
 
         let ref = new Date();
-        let date = ref.getDate() + "-" + ref.getMonth() + 1 + "-" + ref.getFullYear()
+        let month = ref.getMonth() + 1
+        let date = ref.getDate() + "-" + month + "-" + ref.getFullYear()
         document.getElementById("date").innerHTML = `<span>  ${date}</span> `
 
         setTimeout(function () {
