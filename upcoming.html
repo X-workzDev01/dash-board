@@ -65,9 +65,9 @@
 <body>
     <div>
         <span>
-            <h1 class="w3-center w3-amber"><b>UPCOMING BATCH DETAILS</b></h1>
+            <!-- <h1 class="w3-center w3-amber"><b>UPCOMING BATCH DETAILS</b></h1> -->
         </span>
-        <marquee behavior="alternate" scrollamount="20" direction="ltr">Upcoming batch....!!!!</marquee>
+        <!-- <marquee behavior="alternate" scrollamount="20" direction="ltr">Upcoming batch....!!!!</marquee> -->
         <div class="card-container">
             <div class="card">
 
@@ -85,13 +85,13 @@
             let minutes = now.getMinutes()
             let seconds = now.getSeconds()
             const time = hours + "::" + minutes + "::" + seconds
-            document.getElementById("time").innerHTML = `<span>  ${time}</span> <span> HH :: MM  :: Sec </span>`
+            document.getElementById("time").innerHTML = `<span>  ${time}</span> `
 
         }, 1000);
 
         let ref = new Date();
-        let date = ref.getDate() + "-" + ref.getMonth() + "-" + ref.getFullYear()
-        document.getElementById("date").innerHTML = `<span>  ${date}</span> <span> DD-MM-YYYY </span>`
+        let date = ref.getDate() + "-" + ref.getMonth() + 1 + "-" + ref.getFullYear()
+        document.getElementById("date").innerHTML = `<span>  ${date}</span> `
 
         setTimeout(function () {
             window.location.href = "index.html";
