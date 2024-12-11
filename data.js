@@ -23,7 +23,7 @@ let batchList = [
 		trainees: "29",
 		location: "Rajajinagar"
 	},
-	
+
 	{
 		batch: "G019ROM",
 		trainer: "Devendra",
@@ -48,7 +48,7 @@ let batchList = [
 		timing: "06:00 PM",
 		trainees: "7",
 		location: "Online"
-	}.
+	},
 	{
 		batch: "MUO7ROA",
 		trainer: "Lokesh",
@@ -59,12 +59,12 @@ let batchList = [
 	},
 	{
 		batch: "MUO7ROA",
-		trainer: "Lalu",
+		trainer: "Prasad",
 		topic: "Basic Java",
 		timing: "10:30 AM",
 		trainees: "4",
 		location: "Rajajinagar"
-	},
+	}
 	// {
 	//     "batch": "BR23BOM",
 	//     "trainer": "Sunil",
