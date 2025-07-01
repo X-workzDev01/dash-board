@@ -3,7 +3,7 @@ let batchList = [
     // <!-- //om,abhish,suhas.satish,dev,lokesh ,exception vinoda,javascript -hareesha -->
     {
         "batch": "June-5 Rajajinagar",
-        "trainer": "Devendra",
+        "trainer": "Suhas",
         "topic": "Java 8 features",
         "timing":"10:00 AM",
         "trainees":"27"
