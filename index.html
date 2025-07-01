@@ -1,150 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>X-workz</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="icon" type="image/x-icon" href="https://www.x-workz.in/static/media/Logo.cf195593dc1b3f921369.png?">
-    <script type="text/javascript" src="data.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>X-Workz ODC | Logo Animation</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      background: #000 url('https://cdn.wallpapersafari.com/11/37/rRDPyv.jpg') no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .logo-container {
+      position: relative;
+      width: 100vw;
+      max-width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .text-overlay {
+      width: 70vw; /* Adjust for screen */
+      max-width: 960px;
+      opacity: 0;
+      transform: scale(0.05);
+      animation: popText 3s ease-out forwards;
+      pointer-events: none;
+    }
+
+    @keyframes popText {
+      0% {
+        opacity: 0;
+        transform: scale(0.05);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
 </head>
-<style>
-    .Topicss {
-        margin-top: -1rem;
-        display: none;
-    }
-
-    .card-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        margin-top: 20px;
-    }
-
-    .card {
-    width: 300px;
-    border: none;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 10px;
-    box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(to bottom, rgb(76, 152, 177),lightgreen);
-    color: #fff; 
-}
-
-.card h3,
-.card p {
-    color: rgb(12, 0, 0); 
-    font-weight: bolder;
-}
-
-    .card p {
-        margin-bottom: 10px;
-        font-size: 1.1em;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
-
-    .card-odd {
-        background-color: #D8BFD8; 
-    }
-
-    .card-even {
-        background-color: #E6E6FA; 
-    }
-    marquee {
-        width: 100%;
-        background-color: lightcoral;
-        padding: 10px 0;
-        color: rgb(7, 80, 153);
-        font-size: 20px;
-        border-radius: 5px;
-    }
-</style>
 
 <body>
-
-    <div class="Topicss w3-animate-left">
-
-        <span>
-            <h1 class="w3-center w3-amber "><b> ONGOING BATCH DETAILS</b></h1>
-        </span>
-        
-        <div class="card-container" id="ongoingBatch"></div>
-    </div>
-
-    <!-- <div class="Topicss w3-animate-left">
-        <h2 class="w3-center w3-blue"><b>WEEKLY MOCK TEST</b></h2>
-
-        <div class="card-container" id="weeklyMock"></div>
-    </div>
-
-    <div class="Topicss w3-animate-left bg-dark">
-        <span>
-            <h1 class="w3-left"><b> UPCOMING BATCH </b></h1>
-        </span>
-        <div class="card-container" id="upcomingBatch"></div>
-    </div> -->
-
-    <script>
-
-        var slideIndex = 0;
-        slides();
-
-        function slides() {
-            var i;
-            var x = document.getElementsByClassName("Topicss");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > x.length) {
-                slideIndex = 1
-            };
-
-            x[slideIndex - 1].style.display = "block";
-            setTimeout(slides, 2000);
-        }
-
-        batchList.forEach((element, index) => {
-            const card = `
-                <div class="card ${index % 2 === 0 ? 'card-even' : 'card-odd'}">
-                    <h3>${element.batch}</h3>
-                    <p><strong>Trainer:</strong> ${element.trainer}</p>
-                    <p><strong>Topic:</strong> ${element.topic}</p>
-                    <p><strong>Timing:</strong> ${element.timing}</p>
-                    <p><strong>No of Trainees:</strong> ${element.trainees}</p>
-                </div>`;
-            document.getElementById("ongoingBatch").insertAdjacentHTML('beforeend', card);
-        });
-
-        // weeklyMock.forEach((element, index) => {
-        //     const card = `
-        //         <div class="card ${index % 2 === 0 ? 'card-even' : 'card-odd'}">
-        //             <h3>${element.batch}</h3>
-        //             <p><strong>Mock SPOC:</strong> ${element.mock_spoc}</p>
-        //             <p><strong>Topic:</strong> ${element.topic}</p>
-        //         </div>`;
-        //     document.getElementById("weeklyMock").insertAdjacentHTML('beforeend', card);
-        // });
-
-        // upcomingBatch.forEach((element, index) => {
-        //     const card = `
-        //         <div class="card ${index % 2 === 0 ? 'card-even' : 'card-odd'}">
-        //             <h3>${element.batch}</h3>
-        //             <p><strong>Details:</strong> ${element.details}</p>
-        //         </div>`;
-        //     document.getElementById("upcomingBatch").insertAdjacentHTML('beforeend', card);
-        // });
-
-          // Redirect to upcoming batch page after 30 seconds
-          setTimeout(function () {
-            window.location.href = "upcoming.html";
-        }, 30000); // 30 seconds
-
-
-    </script>
-
+  <div class="logo-container">
+    <!-- Orange text only (transparent PNG) -->
+    <img src="images/text_only_xworkz.png" alt="Animated Text" class="text-overlay" />
+  </div>
 </body>
-
 </html>
