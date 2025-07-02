@@ -1,79 +1,103 @@
-body {
+/* Reset and layout */
+* {
   margin: 0;
   padding: 0;
-  background: #121212;
-  font-family: 'Segoe UI', sans-serif;
-  color: #ffffff;
-  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
-.why-container {
-  max-width: 1200px;
-  margin: 5rem auto;
-  padding: 2rem;
-}
-
-.why-container h1 {
-  text-align: center;
-  font-size: 3.5rem;
-  margin-bottom: 3rem;
-  background: linear-gradient(to right, #ff6a00, #ee0979);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.highlight-points {
+body {
+  height: 100vh;
+  width: 100vw;
+  background: #000 url('https://cdn.wallpapersafari.com/11/37/rRDPyv.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
-  margin-bottom: 4rem;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  overflow-y: auto; /* allow scrolling */
+  padding: 40px; /* safe margin on TV */
 }
 
-.highlight-points p {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #f1f1f1;
-  padding: 0.5rem 1rem;
-  border-left: 4px solid #ee0979;
-  transition: all 0.3s ease;
+/* Container setup */
+.why-container {
+  width: 100%;
+  max-width: 1500px;
+  padding: 60px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
-.highlight-points p:hover {
-  transform: translateX(10px);
-  color: #ff6a00;
-  border-left-color: #ff6a00;
+/* Headings and text */
+h1 {
+  font-size: 5rem;
+  color: #ff6f00;
+  margin-bottom: 40px;
 }
 
-.section {
-  margin-bottom: 3.5rem;
-  border-left: 4px solid #444;
-  padding-left: 1.5rem;
-  animation: fadeInUp 1s ease forwards;
-  opacity: 0;
+h2 {
+  font-size: 3rem;
+  margin: 30px 0 15px;
+  color: #ffab00;
 }
 
-.section h2 {
-  font-size: 2rem;
-  color: #ffd86f;
-  margin-bottom: 1rem;
-}
-
-.section p {
-  font-size: 1.2rem;
+p {
+  font-size: 2.2rem;
   line-height: 1.8;
-  color: #cccccc;
+  padding: 0 10px;
 }
 
-/* Animations */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
+/* Highlights */
+.highlight-points {
+  font-size: 2.4rem;
+  margin-bottom: 50px;
+  animation: fadeUp 1.5s ease-in-out forwards;
+}
+
+/* Sections slide in */
+.section {
+  opacity: 0;
+  transform: translateY(40px);
+  margin-bottom: 40px;
+}
+
+/* Keyframes */
+@keyframes fadeUp {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Optional: Responsive scale for ultra-large screens */
+@media (min-width: 1600px) {
+  h1 {
+    font-size: 6rem;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+  }
+
+  p {
+    font-size: 2.5rem;
+  }
+
+  .highlight-points {
+    font-size: 2.8rem;
+  }
+}

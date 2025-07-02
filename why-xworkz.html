@@ -52,5 +52,17 @@
       </p>
     </div>
   </div>
+  <script>
+  const sections = document.querySelectorAll(".section");
+  sections.forEach((section, index) => {
+    setTimeout(() => {
+      section.style.animation = "fadeUp 1s ease forwards";
+    }, 1000 + index * 1500); // Delayed by 1.5s each
+  });
+
+  // Optional: animate highlight points after a small delay
+  document.querySelector(".highlight-points").style.animationDelay = "0.8s";
+</script>
+
 </body>
 </html>
