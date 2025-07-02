@@ -13,7 +13,7 @@ let batchList = [
         "trainer": "Suhas",
         "topic": "Project",
         "timing":"10:00 AM",
-        "trainees":"14"
+        "trainees":"18"
     },
     {
         "batch": "June-19 Rajajinagar",
