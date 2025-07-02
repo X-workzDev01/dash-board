@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Course Content | X-Workz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      padding: 40px 20px;
+      animation: fadeIn 2s ease-in;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 4rem;
+      color: #00ffcc;
+      margin-bottom: 60px;
+      animation: pulse 2s infinite;
+      text-shadow: 0 0 20px #00ffcc;
+    }
+
+    @keyframes pulse {
+      0% { text-shadow: 0 0 20px #00ffcc; }
+      50% { text-shadow: 0 0 40px #00ffff; }
+      100% { text-shadow: 0 0 20px #00ffcc; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section {
+      margin-bottom: 60px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .section h2 {
+      font-size: 2.5rem;
+      color: #3cc266;
+      margin-bottom: 20px;
+      border-left: 5px solid #00e676;
+      text-align: center;
+      padding-left: 10px;
+      text-shadow: 0 0 8px #00e676;
+    }
+
+    .content-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 20px;
+    }
+
+    .column {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      padding: 20px;
+      width: 280px;
+      box-shadow: 0 5px 15px rgba(0, 255, 200, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .column:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 255, 200, 0.25);
+    }
+
+    .column h3 {
+      text-align: center;
+      font-size: 1.6rem;
+      color: #00e676;
+      margin-bottom: 20px;
+      text-shadow: 0 0 8px #00ff99;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      background: #263238;
+      padding: 12px 15px;
+      margin-bottom: 10px;
+      border-left: 5px solid #00e676;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      transition: background 0.3s;
+    }
+
+    ul li:hover {
+      background: #37474f;
+    }
+
+    .three-blocks {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 60px;
+    }
+
+    .block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .block h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #00e676;
+      text-shadow: 0 0 10px #00e676;
+    }
+
+    .inner-columns {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .single-card {
+      display: flex;
+      gap: 30px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 255, 200, 0.1);
+      min-height: 320px;
+    }
+
+    .single-card .column {
+      width: 240px;
+    }
+
+    .row-section {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 1000px) {
+      h1 {
+        font-size: 2.8rem;
+      }
+
+      .section h2 {
+        font-size: 2rem;
+      }
+
+      .row-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .single-card {
+        flex-direction: column;
+        align-items: center;
+        min-height: auto;
+      }
+
+      .single-card .column {
+        width: 100%;
+      }
+    }
+  </style>
+   <script>
+    // Redirect after 6 seconds
+    setTimeout(() => {
+      window.location.href = "branches.html";
+    }, 18000);
+    
+  </script>
+</head>
+<body>
+
+  <h1>Course Content</h1>
+
+  <!-- Java Enterprise Section -->
+  <div class="section">
+    <h2>💻 Developer Track: Core to Advanced Java</h2>
+    <div class="content-grid">
+      <div class="column">
+        <h3>Java Programming</h3>
+        <ul>
+          <li>Fundamentals</li>
+          <li>OOPS Concepts</li>
+          <li>Collections Framework</li>
+          <li>Exception Handling</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h3>Web Development Basics</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>AJAX</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h3>Database & Server-Side</h3>
+        <ul>
+          <li>MySQL</li>
+          <li>Servlets</li>
+          <li>JSP</li>
+          <li>JDBC</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h3>Framework Integration</h3>
+        <ul>
+          <li>Hibernate (JPA)</li>
+          <li>Spring Framework</li>
+          <li>Spring Boot</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h3>Build & Version Control</h3>
+        <ul>
+          <li>GitHub</li>
+          <li>Maven</li>
+          <li>Gradle</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Enterprise Tools & Placement Assistance -->
+  <div class="row-section">
+
+    <!-- Enterprise Tools -->
+    <div class="block">
+      <h2>🛠️ Developer Tools & Utilities</h2>
+      <div class="single-card">
+        <div class="column">
+          <ul>
+            <li>Notepad++</li>
+            <li>Eclipse IDE</li>
+            <li>JDK 8</li>
+            <li>Apache Maven</li>
+            <li>Apache Tomcat</li>
+            <li>Git Bash</li>
+            <li>MySQL Installer</li>
+          </ul>
+        </div>
+        <div class="column">
+          <ul>
+            <li>VS Code IDE</li>
+            <li>Project Lombok</li>
+            <li>7-Zip</li>
+            <li>JAD Decompiler</li>
+            <li>JD-GUI</li>
+            <li>IntelliJ IDEA</li>
+            <li>Postman</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Placement Assistance -->
+    <div class="block">
+      <h2>🎯 Career Support & Placement Training</h2>
+      <div class="single-card">
+        <div class="column">
+          <ul>
+            <li>Resume Building</li>
+            <li>Daily Presentations</li>
+            <li>Mock Interviews</li>
+            <li>Weekly Assessments</li>
+            <li>Technical Aptitude</li>
+            <li>Soft Skills & Behavior Training</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

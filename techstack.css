@@ -1,0 +1,192 @@
+/* techstack.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(120deg, #0d0d0d, #1a1a1a);
+  background-attachment: fixed;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  text-align: center;
+  padding: 60px 30px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Optional animated background sparkles */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png');
+  opacity: 0.05;
+  animation: moveBg 20s linear infinite;
+  z-index: 0;
+}
+
+@keyframes moveBg {
+  from { background-position: 0 0; }
+  to { background-position: 1000px 1000px; }
+}
+
+h1.tech-heading {
+  font-size: 4rem;
+  margin-bottom: 60px;
+  background: linear-gradient(90deg, #00e676, #00bfff, #ff00cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(0, 255, 150, 0.6), 0 0 30px rgba(0, 191, 255, 0.4);
+  position: relative;
+  z-index: 1;
+  animation: popInGlow 2s ease-out forwards;
+  opacity: 0;
+}
+
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 80px;
+  margin-bottom: 60px;
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+.logo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.logo-box:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 20px rgba(0, 230, 118, 0.6);
+}
+
+.tech-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.java-logo {
+  width: 140px;
+}
+
+.logo-box p {
+  font-size: 1.1rem;
+  margin-top: 5px;
+  color: #e0e0e0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1.tech-heading {
+    font-size: 2.5rem;
+  }
+
+  .tech-logo {
+    width: 90px;
+  }
+
+  .java-logo {
+    width: 110px;
+  }
+
+  .row {
+    gap: 40px;
+  }
+}
+/* Sequential logo animation */
+.logo-box {
+  opacity: 0;
+  animation: fadeInUp 5s ease forwards;
+}
+
+.row .logo-box:nth-child(1) {
+  animation-delay: 0.5s;
+}
+.row .logo-box:nth-child(2) {
+  animation-delay: 1s;
+}
+.row .logo-box:nth-child(3) {
+  animation-delay: 1.5s;
+}
+.row .logo-box:nth-child(4) {
+  animation-delay: 2s;
+}
+.row .logo-box:nth-child(5) {
+  animation-delay: 2.5s;
+}
+
+/* Row 2 */
+.container .row:nth-child(2) .logo-box:nth-child(1) {
+  animation-delay: 3s;
+}
+.container .row:nth-child(2) .logo-box:nth-child(2) {
+  animation-delay: 3.5s;
+}
+.container .row:nth-child(2) .logo-box:nth-child(3) {
+  animation-delay: 4s;
+}
+
+/* Row 3 */
+.container .row:nth-child(3) .logo-box:nth-child(1) {
+  animation-delay: 4.5s;
+}
+.container .row:nth-child(3) .logo-box:nth-child(2) {
+  animation-delay: 5s;
+}
+
+@keyframes popInGlow {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(-30px);
+    filter: brightness(1.2);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.1) translateY(5px);
+    filter: brightness(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: brightness(1);
+  }
+}

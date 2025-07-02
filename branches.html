@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>X-workZ Branches</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --primary-color: #d84315;
+      --secondary-color: #1565c0;
+      --card-bg: #ffffff;
+      --text-color: #212121;
+      --shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+  body {
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--text-color);
+  padding: 60px 80px;
+  font-size: 1.8rem;
+  position: relative;
+  z-index: 1;
+
+  background: url("images/branch.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+
+
+    h1 {
+      text-align: center;
+      color: var(--primary-color);
+      font-size: 4rem;
+      margin-bottom: 60px;
+      font-weight: 700;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .branches {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .branch {
+      background: var(--card-bg);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: var(--shadow);
+      width: 600px;
+      transition: transform 0.3s ease;
+    }
+
+    .branch:hover {
+      transform: translateY(-8px);
+    }
+
+    .branch h2 {
+      font-size: 2.8rem;
+      color: var(--primary-color);
+      border-bottom: 3px solid var(--primary-color);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+    }
+
+    .branch p {
+      font-size: 1.8rem;
+      line-height: 1.8;
+      margin: 12px 0;
+    }
+
+    .contact {
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    .contact h2 {
+      font-size: 2.6rem;
+      margin-bottom: 20px;
+      color: var(--secondary-color);
+    }
+
+    .contact p {
+      font-size: 1.8rem;
+      margin: 10px 0;
+    }
+
+    .contact a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 1000px) {
+      body {
+        padding: 30px 20px;
+        font-size: 1.4rem;
+      }
+
+      .branch {
+        width: 100%;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      .branch h2 {
+        font-size: 2rem;
+      }
+
+      .contact h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+    <script>
+    // Redirect after 6 seconds
+    setTimeout(() => {
+      window.location.href = "index.html";
+    }, 10000);
+    
+  </script>
+</head>
+<body>
+
+
+  <h1>🏢 Our Branches</h1>
+
+  <div class="branches">
+    <div class="branch">
+      <h2>Rajajinagar Office</h2>
+      <p>No 712/55, 62<sup>nd</sup> Cross, 5<sup>th</sup> Block</p>
+      <p>Rajajinagar, Bengaluru, Karnataka - 560010</p>
+      <p><strong>Landmark:</strong> Bashyam Circle, Above Titan Showroom</p>
+    </div>
+
+    <div class="branch">
+      <h2>BTM Office</h2>
+      <p>#50, 1<sup>st</sup> Floor, 100 Ft Ring Road</p>
+      <p>Vysya Bank Colony, BTM 2<sup>nd</sup> Stage</p>
+      <p>Bengaluru, Karnataka - 560076</p>
+      <p><strong>Landmark:</strong> Near Vijaya Residency, Nearby Jayadeva Hospital</p>
+    </div>
+  </div>
+
+  <div class="contact">
+    <h2>📞 Contact Details</h2>
+    <p><strong>Website:</strong> <a href="https://www.x-workz.in" target="_blank">www.x-workz.in</a></p>
+    <p><strong>Email:</strong> <a href="mailto:contact@x-workz.in">contact@x-workz.in</a></p>
+    <p><strong>Phone:</strong> 9886971480 / 9886971483</p>
+  </div>
+
+</body>
+</html>
