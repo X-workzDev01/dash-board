@@ -21,20 +21,45 @@
       align-items: center;
       font-family: 'Montserrat', sans-serif;
       color: #fff;
-      overflow: hidden;
+      overflow-y: auto; /* ✅ Fixed to allow scrolling */
+      scroll-snap-type: y mandatory; /* Optional for smoother TV scroll */
       padding: 40px;
     }
 
     .why-container {
-      width: 40vw;
+      width: 33vw;
       padding: 40px;
-      background: rgba(15, 32, 39, 0.85);
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 20px;
       text-align: center;
-      animation: fadeIn 1.2s ease-out;
-      overflow: hidden;
+      animation: fadeIn 1.5s ease-in-out;
+      max-height: 100%;
+      overflow-y: auto; /* ✅ Allow scroll inside container */
+    }
+
+    /* Adjust for smaller TV resolutions like 720p */
+    @media (max-width: 1280px) {
+      .why-container {
+        width: 90vw;
+        padding: 30px;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
+
+      .highlight-points {
+        font-size: 1.3rem;
+        grid-template-columns: 1fr;
+      }
     }
 
     h1 {
@@ -87,6 +112,7 @@
       background: rgba(255, 255, 255, 0.05);
       border-radius: 12px;
       transition: all 0.3s;
+      scroll-snap-align: start; /* Optional for better TV alignment */
     }
 
     .section:hover {
@@ -175,10 +201,12 @@
       }, 500 + index * 500);
     });
 
+    // Auto redirect after 25 seconds
     setTimeout(() => {
       window.location.href = "techstack.html";
     }, 25000);
 
+    // Redirect on right arrow key press
     document.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowRight') {
         window.location.href = "techstack.html";
