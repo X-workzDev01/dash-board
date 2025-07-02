@@ -17,7 +17,7 @@ body {
   font-family: 'Segoe UI', sans-serif;
   color: #fff;
   overflow-y: auto; /* allow scrolling */
-  padding: 30px; /* safe margin on TV */
+  padding: 40px; /* safe margin on TV */
 }
 
 /* Container setup */
