@@ -3,187 +3,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <title>Developer Track - X-Workz</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+  <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
       color: #e0e0e0;
-      padding: 40px 20px;
-      animation: fadeIn 2s ease-in;
+      padding: 40px 15px;
+    }
+body::before {
+  content: none !important;
+}
+
+    h1, h2, h3 {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     }
 
     h1 {
-      text-align: center;
-      font-size: 4rem;
+      font-size: 3rem;
       color: #cfd8dc;
-      margin-bottom: 60px;
-      animation: pulse 2s infinite;
-      text-shadow: 0 0 20px rgba(207, 216, 220, 0.4);
-    }
-
-    @keyframes pulse {
-      0% { text-shadow: 0 0 20px rgba(207, 216, 220, 0.4); }
-      50% { text-shadow: 0 0 30px rgba(207, 216, 220, 0.7); }
-      100% { text-shadow: 0 0 20px rgba(207, 216, 220, 0.4); }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .section {
-      margin-bottom: 60px;
-      animation: fadeIn 1.5s ease-in-out;
-    }
-
-    .section h2 {
-      font-size: 2.5rem;
-      color: #b0bec5;
-      margin-bottom: 20px;
-      border-left: 5px solid #90a4ae;
       text-align: center;
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #b0bec5;
+      margin-bottom: 30px;
+      border-left: 5px solid #90a4ae;
       padding-left: 10px;
-      text-shadow: 0 0 6px rgba(144, 164, 174, 0.4);
     }
 
-    .content-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-      margin-top: 20px;
+    h3 {
+      color: #b0bec5;
+      font-size: 1.3rem;
+      margin-bottom: 15px;
     }
 
-    .column {
-      background: rgba(255, 255, 255, 0.03);
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: none;
       border-radius: 15px;
-      padding: 20px;
-      width: 280px;
       box-shadow: 0 5px 15px rgba(0, 188, 212, 0.15);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease;
     }
 
-    .column:hover {
+    .card:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 25px rgba(0, 188, 212, 0.25);
     }
 
-    .column h3 {
-      text-align: center;
-      font-size: 1.6rem;
-      color: #b0bec5;
-      margin-bottom: 20px;
-      text-shadow: 0 0 5px rgba(176, 190, 197, 0.3);
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    ul li {
-      background: #263238;
-      padding: 12px 15px;
-      margin-bottom: 10px;
-      border-left: 5px solid #78909c;
-      border-radius: 5px;
-      font-size: 1.1rem;
-      transition: background 0.3s;
+    .list-group-item {
+      background-color: #263238;
+      border: none;
       color: #eceff1;
+      border-left: 5px solid #78909c;
+      margin-bottom: 10px;
     }
 
-    ul li:hover {
-      background: #37474f;
+    .list-group-item:hover {
+      background-color: #37474f;
     }
 
-    .three-blocks {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 60px;
-    }
-
-    .block {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .block h2 {
-      margin-bottom: 20px;
-      font-size: 2rem;
-      color: #b0bec5;
-      text-shadow: 0 0 8px rgba(176, 190, 197, 0.3);
-    }
-
-    .inner-columns {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .single-card {
-      display: flex;
-      gap: 30px;
-      background: rgba(255, 255, 255, 0.03);
-      padding: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0, 188, 212, 0.1);
-      min-height: 320px;
-    }
-
-    .single-card .column {
-      width: 240px;
-    }
-
-    .row-section {
-      display: flex;
-      justify-content: center;
-      gap: 60px;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      margin-top: 40px;
-    }
-
-    @media (max-width: 1000px) {
+    @media (max-width: 576px) {
       h1 {
-        font-size: 2.8rem;
-      }
-
-      .section h2 {
         font-size: 2rem;
       }
 
-      .row-section {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .single-card {
-        flex-direction: column;
-        align-items: center;
-        min-height: auto;
-      }
-
-      .single-card .column {
-        width: 100%;
+      h2 {
+        font-size: 1.5rem;
       }
     }
+
+    *::before,
+*::after {
+  content: none !important;
+}
+
+*:focus {
+  outline: none !important;
+  caret-color: transparent !important;
+}
+h2, h2::before, h2::after {
+  caret-color: transparent !important;
+  border: none !important;
+  content: "" !important;
+}
+
+
   </style>
+
   <script>
-    // Redirect after 18 seconds
     setTimeout(() => {
       window.location.href = "branches.html";
     }, 18000);
@@ -191,62 +103,73 @@
 </head>
 <body>
 
-  <!-- Java Enterprise Section -->
-  <div class="section">
-    <h2>💻 Developer Track: Core to Advanced Java</h2>
-    <div class="content-grid">
-      <div class="column">
-        <h3>Web Development Basics</h3>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>AJAX</li>
-        </ul>
+  <h1>💻 Developer Track: Core to Advanced Java</h1>
+
+  <div class="container">
+    <!-- Core to Advanced Java Topics -->
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="card p-3 h-100">
+          <h3 class="text-center">Web Development Basics</h3>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">HTML</li>
+            <li class="list-group-item">CSS</li>
+            <li class="list-group-item">JavaScript</li>
+            <li class="list-group-item">AJAX</li>
+          </ul>
+        </div>
       </div>
-      <div class="column">
-        <h3>Database & Server-Side</h3>
-        <ul>
-          <li>MySQL</li>
-          <li>Servlets</li>
-          <li>JSP</li>
-          <li>JDBC</li>
-        </ul>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card p-3 h-100">
+          <h3 class="text-center">Database & Server-Side</h3>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">MySQL</li>
+            <li class="list-group-item">Servlets</li>
+            <li class="list-group-item">JSP</li>
+            <li class="list-group-item">JDBC</li>
+          </ul>
+        </div>
       </div>
-      <div class="column">
-        <h3>Framework Integration</h3>
-        <ul>
-          <li>Hibernate (JPA)</li>
-          <li>Spring Framework</li>
-          <li>Spring Boot</li>
-        </ul>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card p-3 h-100">
+          <h3 class="text-center">Framework Integration</h3>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Hibernate (JPA)</li>
+            <li class="list-group-item">Spring Framework</li>
+            <li class="list-group-item">Spring Boot</li>
+          </ul>
+        </div>
       </div>
-      <div class="column">
-        <h3>Build & Version Control</h3>
-        <ul>
-          <li>GitHub</li>
-          <li>Maven</li>
-          <li>Gradle</li>
-        </ul>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card p-3 h-100">
+          <h3 class="text-center">Build & Version Control</h3>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">GitHub</li>
+            <li class="list-group-item">Maven</li>
+            <li class="list-group-item">Gradle</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Enterprise Tools & Placement Assistance -->
-  <div class="row-section">
-    <!-- Placement Assistance -->
-    <div class="block">
-      <h2>🎯 Career Support & Placement Training</h2>
-      <div class="single-card">
-        <div class="column">
-          <ul>
-            <li>Resume Building</li>
-            <li>Daily Presentations</li>
-            <li>Mock Interviews</li>
-            <li>Weekly Assessments</li>
-            <li>Technical Aptitude</li>
-            <li>Soft Skills & Behavior Training</li>
-          </ul>
+    <!-- Career Support Section -->
+    <div class="mt-5">
+<h2 class="text-center" style="overflow: hidden;">Career Support & Placement Training</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+          <div class="card p-4">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Resume Building</li>
+              <li class="list-group-item">Daily Presentations</li>
+              <li class="list-group-item">Mock Interviews</li>
+              <li class="list-group-item">Weekly Assessments</li>
+              <li class="list-group-item">Technical Aptitude</li>
+              <li class="list-group-item">Soft Skills & Behavior Training</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
