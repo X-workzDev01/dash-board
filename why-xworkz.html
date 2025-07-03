@@ -12,18 +12,17 @@
       box-sizing: border-box;
     }
 
-    body {
-      height: 100vh;
-      width: 100vw;
+    html, body {
+      height: 100%;
+      width: 100%;
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: 'Montserrat', sans-serif;
-      color: #fff;
-      overflow-y: auto; /* ✅ Fixed to allow scrolling */
-      scroll-snap-type: y mandatory; /* Optional for smoother TV scroll */
       padding: 40px;
+      overflow: auto;
     }
 
     .why-container {
@@ -33,33 +32,9 @@
       border-radius: 20px;
       text-align: center;
       animation: fadeIn 1.5s ease-in-out;
-      max-height: 100%;
-      overflow-y: auto; /* ✅ Allow scroll inside container */
-    }
-
-    /* Adjust for smaller TV resolutions like 720p */
-    @media (max-width: 1280px) {
-      .why-container {
-        width: 90vw;
-        padding: 30px;
-      }
-
-      h1 {
-        font-size: 2.2rem;
-      }
-
-      h2 {
-        font-size: 1.5rem;
-      }
-
-      p {
-        font-size: 1.1rem;
-      }
-
-      .highlight-points {
-        font-size: 1.3rem;
-        grid-template-columns: 1fr;
-      }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     h1 {
@@ -69,54 +44,54 @@
       font-weight: 700;
     }
 
-    h2 {
-      font-size: 1.6rem;
-      margin: 20px 0 10px;
-      color: #a8edea;
-    }
-
-    p {
-      font-size: 1.2rem;
-      line-height: 1.5;
-      margin-bottom: 12px;
-    }
-
     .highlight-points {
       display: grid;
       grid-template-columns: 1fr;
       gap: 15px;
-      margin: 30px 0;
+      margin: 0; /* remove extra space below */
       font-size: 1.3rem;
       animation: fadeUp 1s ease-out forwards;
     }
 
-    .highlight-points p {
-      background: rgba(0, 212, 255, 0.1);
-      padding: 15px;
-      border-radius: 8px;
-      border-left: 4px solid #00d4ff;
-      text-align: left;
-      transition: transform 0.3s;
-    }
+.highlight-points {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.point {
+  display: flex;
+  align-items: center;
+  background: rgba(0, 212, 255, 0.1);
+  border-left: 4px solid #00d4ff;
+  border-radius: 8px;
+  padding: 15px 20px;
+  gap: 12px;
+  font-size: 1.2rem;
+  transition: background 0.3s;
+}
+
+.point:hover {
+  background: rgba(0, 212, 255, 0.15);
+}
+
+.tick {
+  width: 24px;            /* Fixed width ensures vertical alignment */
+  text-align: center;
+  flex-shrink: 0;
+}
+
+
+
+
+
+
+
 
     .highlight-points p:hover {
       transform: translateY(-5px);
       background: rgba(0, 212, 255, 0.15);
-    }
-
-    .section {
-      opacity: 0;
-      transform: translateY(40px);
-      margin-bottom: 30px;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 12px;
-      transition: all 0.3s;
-      scroll-snap-align: start; /* Optional for better TV alignment */
-    }
-
-    .section:hover {
-      background: rgba(255, 255, 255, 0.08);
     }
 
     @keyframes fadeUp {
@@ -137,6 +112,21 @@
       }
     }
 
+    @media (max-width: 1280px) {
+      .why-container {
+        width: 90vw;
+        padding: 30px;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .highlight-points {
+        font-size: 1.3rem;
+      }
+    }
+
     @media (max-width: 768px) {
       .why-container {
         width: 90vw;
@@ -147,45 +137,41 @@
         font-size: 2rem;
       }
 
-      h2 {
-        font-size: 1.4rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-
       .highlight-points {
         font-size: 1.2rem;
       }
     }
+    @keyframes sway {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+
   </style>
 </head>
 <body>
   <div class="why-container">
     <h1>Why Choose X-Workz?</h1>
-
     <div class="highlight-points">
-      <p>✅ Industry-Expert Trainers</p>
-      <p>✅ Career Guidance & Placements</p>
-      <p>✅ Full Application Development</p>
-      <p>✅ Advanced Technical Skills</p>
-    </div>
-    
-  
+  <div class="point"><span class="tick">✅</span><span>Industry-Expert Trainers</span></div>
+  <div class="point"><span class="tick">✅</span><span>Career Guidance & Placements</span></div>
+  <div class="point"><span class="tick">✅</span><span>Full Application Development</span></div>
+  <div class="point"><span class="tick">✅</span><span>Advanced Technical Skills</span></div>
+</div>
+
+  </div>
 
   <script>
-    const sections = document.querySelectorAll(".section");
-    sections.forEach((section, index) => {
-      setTimeout(() => {
-        section.style.animation = "fadeUp 1s ease forwards";
-      }, 500 + index * 500);
-    });
-
     // Auto redirect after 25 seconds
     setTimeout(() => {
       window.location.href = "whoweare.html";
-    }, 25000);
+    }, 10000);
 
     // Redirect on right arrow key press
     document.addEventListener('keydown', (e) => {

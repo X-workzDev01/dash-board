@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Course Content | X-Workz</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     * {
@@ -14,7 +13,7 @@
     body {
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #fff;
+      color: #e0e0e0;
       padding: 40px 20px;
       animation: fadeIn 2s ease-in;
     }
@@ -22,16 +21,16 @@
     h1 {
       text-align: center;
       font-size: 4rem;
-      color: #00ffcc;
+      color: #cfd8dc;
       margin-bottom: 60px;
       animation: pulse 2s infinite;
-      text-shadow: 0 0 20px #00ffcc;
+      text-shadow: 0 0 20px rgba(207, 216, 220, 0.4);
     }
 
     @keyframes pulse {
-      0% { text-shadow: 0 0 20px #00ffcc; }
-      50% { text-shadow: 0 0 40px #00ffff; }
-      100% { text-shadow: 0 0 20px #00ffcc; }
+      0% { text-shadow: 0 0 20px rgba(207, 216, 220, 0.4); }
+      50% { text-shadow: 0 0 30px rgba(207, 216, 220, 0.7); }
+      100% { text-shadow: 0 0 20px rgba(207, 216, 220, 0.4); }
     }
 
     @keyframes fadeIn {
@@ -46,12 +45,12 @@
 
     .section h2 {
       font-size: 2.5rem;
-      color: #3cc266;
+      color: #b0bec5;
       margin-bottom: 20px;
-      border-left: 5px solid #00e676;
+      border-left: 5px solid #90a4ae;
       text-align: center;
       padding-left: 10px;
-      text-shadow: 0 0 8px #00e676;
+      text-shadow: 0 0 6px rgba(144, 164, 174, 0.4);
     }
 
     .content-grid {
@@ -63,25 +62,25 @@
     }
 
     .column {
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.03);
       border-radius: 15px;
       padding: 20px;
       width: 280px;
-      box-shadow: 0 5px 15px rgba(0, 255, 200, 0.1);
+      box-shadow: 0 5px 15px rgba(0, 188, 212, 0.15);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .column:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0, 255, 200, 0.25);
+      box-shadow: 0 8px 25px rgba(0, 188, 212, 0.25);
     }
 
     .column h3 {
       text-align: center;
       font-size: 1.6rem;
-      color: #00e676;
+      color: #b0bec5;
       margin-bottom: 20px;
-      text-shadow: 0 0 8px #00ff99;
+      text-shadow: 0 0 5px rgba(176, 190, 197, 0.3);
     }
 
     ul {
@@ -93,10 +92,11 @@
       background: #263238;
       padding: 12px 15px;
       margin-bottom: 10px;
-      border-left: 5px solid #00e676;
+      border-left: 5px solid #78909c;
       border-radius: 5px;
       font-size: 1.1rem;
       transition: background 0.3s;
+      color: #eceff1;
     }
 
     ul li:hover {
@@ -121,8 +121,8 @@
     .block h2 {
       margin-bottom: 20px;
       font-size: 2rem;
-      color: #00e676;
-      text-shadow: 0 0 10px #00e676;
+      color: #b0bec5;
+      text-shadow: 0 0 8px rgba(176, 190, 197, 0.3);
     }
 
     .inner-columns {
@@ -135,12 +135,12 @@
     .single-card {
       display: flex;
       gap: 30px;
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.03);
       padding: 20px;
       flex-wrap: wrap;
       justify-content: center;
       border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0, 255, 200, 0.1);
+      box-shadow: 0 10px 25px rgba(0, 188, 212, 0.1);
       min-height: 320px;
     }
 
@@ -182,31 +182,19 @@
       }
     }
   </style>
-   <script>
-    // Redirect after 6 seconds
+  <script>
+    // Redirect after 18 seconds
     setTimeout(() => {
       window.location.href = "branches.html";
     }, 18000);
-    
   </script>
 </head>
 <body>
-
-  <h1>Course Content</h1>
 
   <!-- Java Enterprise Section -->
   <div class="section">
     <h2>💻 Developer Track: Core to Advanced Java</h2>
     <div class="content-grid">
-      <div class="column">
-        <h3>Java Programming</h3>
-        <ul>
-          <li>Fundamentals</li>
-          <li>OOPS Concepts</li>
-          <li>Collections Framework</li>
-          <li>Exception Handling</li>
-        </ul>
-      </div>
       <div class="column">
         <h3>Web Development Basics</h3>
         <ul>
@@ -246,36 +234,6 @@
 
   <!-- Enterprise Tools & Placement Assistance -->
   <div class="row-section">
-
-    <!-- Enterprise Tools -->
-    <div class="block">
-      <h2>🛠️ Developer Tools & Utilities</h2>
-      <div class="single-card">
-        <div class="column">
-          <ul>
-            <li>Notepad++</li>
-            <li>Eclipse IDE</li>
-            <li>JDK 8</li>
-            <li>Apache Maven</li>
-            <li>Apache Tomcat</li>
-            <li>Git Bash</li>
-            <li>MySQL Installer</li>
-          </ul>
-        </div>
-        <div class="column">
-          <ul>
-            <li>VS Code IDE</li>
-            <li>Project Lombok</li>
-            <li>7-Zip</li>
-            <li>JAD Decompiler</li>
-            <li>JD-GUI</li>
-            <li>IntelliJ IDEA</li>
-            <li>Postman</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
     <!-- Placement Assistance -->
     <div class="block">
       <h2>🎯 Career Support & Placement Training</h2>
@@ -292,7 +250,6 @@
         </div>
       </div>
     </div>
-
   </div>
 
 </body>

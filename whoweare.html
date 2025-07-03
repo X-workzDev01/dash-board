@@ -27,15 +27,17 @@
     }
 
     .why-container {
-      width: 33vw;
-      padding: 40px;
-      background: rgba(0, 0, 0, 0.7);
-      border-radius: 20px;
-      text-align: center;
-      animation: fadeIn 1.5s ease-in-out;
-      max-height: 100%;
-      overflow-y: auto; /* ✅ Allow scroll inside container */
-    }
+  width: 33vw;
+  padding: 30px 20px;             /* Reduced padding */
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+  height: auto;
+  max-height: 80vh;              /* Reduced height */
+  overflow-y: auto;
+}
+
 
     /* Adjust for smaller TV resolutions like 720p */
     @media (max-width: 1280px) {

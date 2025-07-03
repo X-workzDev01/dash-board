@@ -120,13 +120,12 @@ h1.tech-heading {
     font-size: 2.5rem;
   }
 
-  .tech-logo {
-    width: 90px;
-  }
+ .tech-logo,
+.java-logo {
+  max-width: 100%;
+  height: auto;
+}
 
-  .java-logo {
-    width: 110px;
-  }
 
   .row {
     gap: 40px;
@@ -135,6 +134,8 @@ h1.tech-heading {
 /* Sequential logo animation */
 .logo-box {
   opacity: 0;
+    width: 200px; /* Try this */
+
   animation: fadeInUp 5s ease forwards;
 }
 
@@ -172,6 +173,19 @@ h1.tech-heading {
 .container .row:nth-child(3) .logo-box:nth-child(2) {
   animation-delay: 5s;
 }
+.container .row:nth-child(3) .logo-box:nth-child(3) {
+  animation-delay: 5.5s;
+}
+.container .row:nth-child(3) .logo-box:nth-child(4) {
+  animation-delay: 6s;
+}
+.container .row:nth-child(3) .logo-box:nth-child(5) {
+  animation-delay: 6.5s;
+}
+.container .row:nth-child(3) .logo-box:nth-child(6) {
+  animation-delay: 7s;
+}
+
 
 @keyframes popInGlow {
   0% {
