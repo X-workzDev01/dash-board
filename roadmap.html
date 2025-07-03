@@ -24,14 +24,14 @@
       flex-direction: column;
       align-items: center;
       padding: 40px 20px;
-      gap: 60px;
+      gap: 100px;
       position: relative;
     }
 
     .row {
       display: flex;
       justify-content: center;
-      gap: 80px;
+      gap: 150px;
       position: relative;
       flex-wrap: nowrap;
       overflow-x: auto;
@@ -139,44 +139,45 @@
     }
   </style>
 
-  <script>
-    function drawConnector() {
-      const jee = document.querySelector('.jee-step');
-      const enterprise = document.querySelector('.enterprise-step');
-      const roadmap = document.querySelector('.roadmap-wrapper');
+ <script>
+  function drawConnector() {
+    const jee = document.querySelector('.jee-step');
+    const enterprise = document.querySelector('.enterprise-step');
+    const roadmap = document.querySelector('.roadmap-wrapper');
 
-      if (!jee || !enterprise || !roadmap) return;
+    if (!jee || !enterprise || !roadmap) return;
 
-      // Remove old connector if it exists
-      const existing = document.querySelector('.vertical-connector');
-      if (existing) existing.remove();
+    // Remove old connector if it exists
+    const existing = document.querySelector('.vertical-connector');
+    if (existing) existing.remove();
 
-      const jeeRect = jee.getBoundingClientRect();
-      const entRect = enterprise.getBoundingClientRect();
-      const roadmapRect = roadmap.getBoundingClientRect();
+    const jeeRect = jee.getBoundingClientRect();
+    const entRect = enterprise.getBoundingClientRect();
+    const roadmapRect = roadmap.getBoundingClientRect();
 
-      const connector = document.createElement('div');
-      connector.classList.add('vertical-connector');
+    const connector = document.createElement('div');
+    connector.classList.add('vertical-connector');
 
-      const jeeCenterX = jeeRect.left + jeeRect.width / 2 - roadmapRect.left;
-      const jeeBottomY = jeeRect.bottom - roadmapRect.top;
-      const entCenterY = entRect.top + entRect.height / 2 - roadmapRect.top;
+    const jeeCenterX = jeeRect.left + jeeRect.width / 2 - roadmapRect.left;
+    const jeeBottomY = jeeRect.bottom - roadmapRect.top;
+    const entCenterY = entRect.top + entRect.height / 2 - roadmapRect.top;
 
-      connector.style.left = `${jeeCenterX - 1}px`; // center 2px line
-      connector.style.top = `${jeeBottomY}px`;
-      connector.style.height = `${entCenterY - jeeBottomY}px`;
+    connector.style.left = `${jeeCenterX - 1}px`; // center 2px line
+    connector.style.top = `${jeeBottomY}px`;
+    connector.style.height = `${entCenterY - jeeBottomY - 20}px`; // Reduced height
 
-      roadmap.appendChild(connector);
-    }
+    roadmap.appendChild(connector);
+  }
 
-    window.addEventListener('load', drawConnector);
-    window.addEventListener('resize', drawConnector);
+  window.addEventListener('load', drawConnector);
+  window.addEventListener('resize', drawConnector);
 
-    // Optional redirect after 13s
-    setTimeout(() => {
-      window.location.href = "branches.html";
-    }, 13000);
-  </script>
+  // Optional redirect after 13s
+  setTimeout(() => {
+    window.location.href = "branches.html";
+  }, 13000);
+</script>
+
 </head>
 <body>
 
