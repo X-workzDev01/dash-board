@@ -13,40 +13,28 @@
       color: #e0e0e0;
       padding: 40px 15px;
     }
-body::before {
-  content: none !important;
-}
-
-    h1, h2, h3 {
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-    }
 
     h1 {
       font-size: 3rem;
       color: #cfd8dc;
       text-align: center;
       margin-bottom: 60px;
-    }
-
-    h2 {
-      font-size: 2rem;
-      color: #b0bec5;
-      margin-bottom: 30px;
-      border-left: 5px solid #90a4ae;
-      padding-left: 10px;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     }
 
     h3 {
       color: #b0bec5;
-      font-size: 1.3rem;
-      margin-bottom: 15px;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      text-align: center;
     }
 
     .card {
       background: rgba(255, 255, 255, 0.05);
-      border: none;
+      border: 2px solid white;
       border-radius: 15px;
       box-shadow: 0 5px 15px rgba(0, 188, 212, 0.15);
+      height: 100%;
       transition: transform 0.3s ease;
     }
 
@@ -67,38 +55,20 @@ body::before {
       background-color: #37474f;
     }
 
-    @media (max-width: 576px) {
+    @media (max-width: 768px) {
       h1 {
         font-size: 2rem;
       }
-
-      h2 {
-        font-size: 1.5rem;
+      h3 {
+        font-size: 1rem;
       }
     }
-
-    *::before,
-*::after {
-  content: none !important;
-}
-
-*:focus {
-  outline: none !important;
-  caret-color: transparent !important;
-}
-h2, h2::before, h2::after {
-  caret-color: transparent !important;
-  border: none !important;
-  content: "" !important;
-}
-
-
   </style>
 
   <script>
     setTimeout(() => {
       window.location.href = "branches.html";
-    }, 18000);
+    }, 25000);
   </script>
 </head>
 <body>
@@ -106,11 +76,23 @@ h2, h2::before, h2::after {
   <h1>💻 Developer Track: Core to Advanced Java</h1>
 
   <div class="container">
-    <!-- Core to Advanced Java Topics -->
-    <div class="row g-4">
-      <div class="col-md-6 col-lg-3">
-        <div class="card p-3 h-100">
-          <h3 class="text-center">Web Development Basics</h3>
+    <div class="row g-4 justify-content-center">
+      <!-- Core Java -->
+      <div class="col-md-4 col-lg-3">
+        <div class="card p-3">
+          <h3>Core Java</h3>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">OOPs</li>
+            <li class="list-group-item">Collections</li>
+            <li class="list-group-item">Exception Handling</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Web Tech -->
+      <div class="col-md-4 col-lg-3">
+        <div class="card p-3">
+          <h3>Web Technologies</h3>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">HTML</li>
             <li class="list-group-item">CSS</li>
@@ -120,9 +102,10 @@ h2, h2::before, h2::after {
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-3">
-        <div class="card p-3 h-100">
-          <h3 class="text-center">Database & Server-Side</h3>
+      <!-- Database -->
+      <div class="col-md-4 col-lg-3">
+        <div class="card p-3">
+          <h3>Database & Server-side</h3>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">MySQL</li>
             <li class="list-group-item">Servlets</li>
@@ -132,9 +115,10 @@ h2, h2::before, h2::after {
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-3">
-        <div class="card p-3 h-100">
-          <h3 class="text-center">Framework Integration</h3>
+      <!-- Advanced Java -->
+      <div class="col-md-4 col-lg-3">
+        <div class="card p-3">
+          <h3>Frameworks</h3>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Hibernate (JPA)</li>
             <li class="list-group-item">Spring Framework</li>
@@ -143,9 +127,10 @@ h2, h2::before, h2::after {
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-3">
-        <div class="card p-3 h-100">
-          <h3 class="text-center">Build & Version Control</h3>
+      <!-- Build Tools -->
+      <div class="col-md-4 col-lg-3">
+        <div class="card p-3">
+          <h3>Build & Version Control</h3>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">GitHub</li>
             <li class="list-group-item">Maven</li>
@@ -153,23 +138,40 @@ h2, h2::before, h2::after {
           </ul>
         </div>
       </div>
-    </div>
 
-    <!-- Career Support Section -->
-    <div class="mt-5">
-<h2 class="text-center" style="overflow: hidden;">Career Support & Placement Training</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-6 col-lg-5">
-          <div class="card p-4">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Resume Building</li>
-              <li class="list-group-item">Daily Presentations</li>
-              <li class="list-group-item">Mock Interviews</li>
-              <li class="list-group-item">Weekly Assessments</li>
-              <li class="list-group-item">Technical Aptitude</li>
-              <li class="list-group-item">Soft Skills & Behavior Training</li>
-            </ul>
-          </div>
+      <!-- Resume -->
+      <div class="col-md-4 col-lg-3">
+        <div class="card p-3">
+          <h3>Resume & Communication</h3>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Resume Building</li>
+            <li class="list-group-item">Soft Skills</li>
+            <li class="list-group-item">Behavior Training</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Interview -->
+      <div class="col-md-4 col-lg-3">
+        <div class="card p-3">
+          <h3>Interview Readiness</h3>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Mock Interviews</li>
+            <li class="list-group-item">Technical Aptitude</li>
+            <li class="list-group-item">Problem Solving</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Assessments -->
+      <div class="col-md-4 col-lg-3">
+        <div class="card p-3">
+          <h3>Assessments</h3>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Daily Presentations</li>
+            <li class="list-group-item">Weekly Assessments</li>
+            <li class="list-group-item">Feedback Sessions</li>
+          </ul>
         </div>
       </div>
     </div>
