@@ -2,238 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Java Developer Roadmap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Roadmap Video</title>
   <style>
     body {
       margin: 0;
+      padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #0c0c0c;
-      color: #333;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #e0e0e0;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     h1 {
+      font-size: 3rem;
+      color: #cfd8dc;
       text-align: center;
-      padding: 30px 20px 10px;
-      font-size: 32px;
-      color: #2e7d32;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     }
 
-    .roadmap-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 40px 20px;
-      gap: 100px;
-      position: relative;
-    }
-
-    .row {
-      display: flex;
-      justify-content: center;
-      gap: 150px;
-      position: relative;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-    }
-
-    .step {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      background: radial-gradient(circle at top left, #ffffff, #e8f5e9);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 15px;
-      position: relative;
-      transition: transform 0.3s ease;
-      flex-shrink: 0;
-    }
-
-    .step:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    }
-
-    .dot {
-      width: 12px;
-      height: 12px;
-      background: #4CAF50;
-      border-radius: 50%;
-      margin-bottom: 10px;
-    }
-
-    .label {
-      font-weight: 600;
-      font-size: 16px;
-      color: #2e7d32;
-      margin-bottom: 6px;
-    }
-
-    .subtopics {
-      font-size: 13px;
-      color: #444;
-      line-height: 1.3;
-    }
-
-    /* Horizontal dotted lines */
-    .step:not(:last-child)::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      right: -45px;
-      width: 90px;
-      height: 2px;
-      background: repeating-linear-gradient(
-        to right,
-        #4CAF50,
-        #4CAF50 5px,
-        transparent 5px,
-        transparent 10px
-      );
-      animation: dashmove-x 1s linear infinite;
-      transform: translateY(-50%);
-    }
-
-    @keyframes dashmove-x {
-      0% { background-position: 0 0; }
-      100% { background-position: 10px 0; }
-    }
-
-    @keyframes dashmove-y {
-      0% { background-position: 0 0; }
-      100% { background-position: 0 10px; }
-    }
-
-    /* Vertical connector */
-    .vertical-connector {
-      position: absolute;
-      width: 2px;
-      height: 0;
-      background: repeating-linear-gradient(
-        to bottom,
-        #4CAF50,
-        #4CAF50 5px,
-        transparent 5px,
-        transparent 10px
-      );
-      animation: dashmove-y 1s linear infinite;
-      z-index: 0;
+    video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: contain;
+      background-color: black;
     }
 
     @media (max-width: 768px) {
-      .row {
-        flex-direction: column;
-        gap: 40px;
-        overflow-x: unset;
-      }
-
-      .step:not(:last-child)::after,
-      .vertical-connector {
-        display: none;
+      h1 {
+        font-size: 2rem;
       }
     }
   </style>
 
- <script>
-  function drawConnector() {
-    const jee = document.querySelector('.jee-step');
-    const enterprise = document.querySelector('.enterprise-step');
-    const roadmap = document.querySelector('.roadmap-wrapper');
-
-    if (!jee || !enterprise || !roadmap) return;
-
-    // Remove old connector if it exists
-    const existing = document.querySelector('.vertical-connector');
-    if (existing) existing.remove();
-
-    const jeeRect = jee.getBoundingClientRect();
-    const entRect = enterprise.getBoundingClientRect();
-    const roadmapRect = roadmap.getBoundingClientRect();
-
-    const connector = document.createElement('div');
-    connector.classList.add('vertical-connector');
-
-    const jeeCenterX = jeeRect.left + jeeRect.width / 2 - roadmapRect.left;
-    const jeeBottomY = jeeRect.bottom - roadmapRect.top;
-    const entCenterY = entRect.top + entRect.height / 2 - roadmapRect.top;
-
-    connector.style.left = `${jeeCenterX - 1}px`; // center 2px line
-    connector.style.top = `${jeeBottomY}px`;
-    connector.style.height = `${entCenterY - jeeBottomY - 20}px`; // Reduced height
-
-    roadmap.appendChild(connector);
-  }
-
-  window.addEventListener('load', drawConnector);
-  window.addEventListener('resize', drawConnector);
-
-  // Optional redirect after 13s
-  setTimeout(() => {
-    window.location.href = "branches.html";
-  }, 13000);
-</script>
-
+  <script>
+    setTimeout(() => {
+      window.location.href = "branches.html";
+    }, 15000);
+  </script>
 </head>
 <body>
 
-<h1>Java Developer Roadmap</h1>
+  <!-- Optional title -->
+  <!-- <h1>Welcome to the Roadmap</h1> -->
 
-<div class="roadmap-wrapper">
-
-  <!-- First Row -->
-  <div class="row">
-    <div class="step">
-      <div class="dot"></div>
-      <div class="label">Core Java</div>
-      <div class="subtopics">OOP, Collections,<br/> Exceptions</div>
-    </div>
-    <div class="step">
-      <div class="dot"></div>
-      <div class="label">Web Tech</div>
-      <div class="subtopics">HTML, CSS, JS</div>
-    </div>
-    <div class="step">
-      <div class="dot"></div>
-      <div class="label">Database</div>
-      <div class="subtopics">MySQL</div>
-    </div>
-    <div class="step jee-step">
-      <div class="dot"></div>
-      <div class="label">JEE</div>
-      <div class="subtopics">Servlets, JSP,<br/> JDBC</div>
-    </div>
-  </div>
-
-  <!-- Second Row -->
-  <div class="row">
-    <div class="step">
-      <div class="dot"></div>
-      <div class="label">Frameworks</div>
-      <div class="subtopics">Hibernate,<br/> Spring Boot</div>
-    </div>
-    <div class="step">
-      <div class="dot"></div>
-      <div class="label">Build Tools</div>
-      <div class="subtopics">Maven, Gradle</div>
-    </div>
-    <div class="step">
-      <div class="dot"></div>
-      <div class="label">Version Control</div>
-      <div class="subtopics">Git, GitHub</div>
-    </div>
-    <div class="step enterprise-step">
-      <div class="dot"></div>
-      <div class="label">Enterprise Project</div>
-      <div class="subtopics">Full-stack App</div>
-    </div>
-  </div>
-
-</div>
+  <video autoplay muted playsinline loop>
+    <source src="images/roadmap.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
 
 </body>
 </html>
